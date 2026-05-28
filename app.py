@@ -29,17 +29,17 @@ def init_db():
     c.execute("SELECT COUNT(*) FROM tasks")
     if c.fetchone()[0] == 0:
         initial_tasks = [
-            ("1. Сумма двух чисел", "beginner", 
+            ("1. Сумма двух чисел", "Начинающий", 
              "Напишите функцию `sum_two_numbers(a, b)`, которая возвращает сумму двух чисел.",
              "def sum_two_numbers(a, b):\n    # Ваш код здесь\n    pass",
              json.dumps([{"input": [3, 5], "output": 8}, {"input": [-1, 7], "output": 6}])),
 
-            ("2. Чётное или нечётное", "beginner",
+            ("2. Чётное или нечётное", "Начинающий",
              "Напишите функцию `is_even(number)`, которая возвращает `True`, если число чётное, иначе `False`.",
              "def is_even(number):\n    # Ваш код здесь\n    pass",
              json.dumps([{"input": [4], "output": True}, {"input": [7], "output": False}])),
 
-            ("3. Перевернуть строку", "beginner",
+            ("3. Перевернуть строку", "Начинающий",
              "Напишите функцию `reverse_string(s)`, которая возвращает строку в обратном порядке.",
              "def reverse_string(s):\n    # Ваш код здесь\n    pass",
              json.dumps([{"input": ["hello"], "output": "olleh"}, {"input": ["Python"], "output": "nohtyP"}])),
